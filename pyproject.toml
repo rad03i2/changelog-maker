@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "changelog-maker"
+version = "1.0.0"
+description = "Generate clean Markdown changelogs from Conventional Commit history."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+dependencies = []
+
+[project.scripts]
+changelog-maker = "changelog_maker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
